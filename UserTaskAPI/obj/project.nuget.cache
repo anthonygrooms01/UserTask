@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v2FV+0BNzK4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\UserTaskAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\camer\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.15\\microsoft.aspnetcore.openapi.9.0.15.nupkg.sha512",
+    "C:\\Users\\camer\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
