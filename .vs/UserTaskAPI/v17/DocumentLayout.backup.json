@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\models\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\models\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|c:\\users\\camer\\onedrive\\documents\\practice\\c# practice\\usertaskapi\\usertaskapi\\usertaskapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{EA78A504-2C04-427F-8C86-968305922E28}|UserTaskAPI\\UserTaskAPI.csproj|solutionrelative:usertaskapi\\usertaskapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,23 +38,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "UserTaskAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "UserTaskAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-25T13:24:51.428Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserTaskAPI.http",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\UserTaskAPI.http",
+              "RelativeDocumentMoniker": "UserTaskAPI\\UserTaskAPI.http",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\UserTaskAPI.http",
+              "RelativeToolTip": "UserTaskAPI\\UserTaskAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-04-25T13:04:47.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "UserTaskAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\appsettings.json",
+              "RelativeToolTip": "UserTaskAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-25T13:04:42.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "UserTaskAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "UserTaskAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T12:36:36.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Program.cs",
+              "RelativeDocumentMoniker": "UserTaskAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Program.cs",
+              "RelativeToolTip": "UserTaskAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T12:35:12.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Models\\UserContext.cs",
+              "RelativeDocumentMoniker": "UserTaskAPI\\Models\\UserContext.cs",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Models\\UserContext.cs",
+              "RelativeToolTip": "UserTaskAPI\\Models\\UserContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T12:31:06.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "UserTaskAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\camer\\OneDrive\\Documents\\Practice\\C# Practice\\UserTaskAPI\\UserTaskAPI\\Models\\User.cs",
+              "RelativeToolTip": "UserTaskAPI\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T00:56:52.705Z",
+              "EditorCaption": ""
             }
           ]
         }

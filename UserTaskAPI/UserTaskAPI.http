@@ -1,6 +1,6 @@
 @UserTaskAPI_HostAddress = http://localhost:5281
 
-GET {{UserTaskAPI_HostAddress}}/weatherforecast/
+GET {{UserTaskAPI_HostAddress}}/users/
 Accept: application/json
 
 ###
