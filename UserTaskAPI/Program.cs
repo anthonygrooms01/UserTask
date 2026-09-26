@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using UserTaskAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("ConnectionString 'DefaultConnection' not found.");
+
+Console.WriteLine(connectionString);
+
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

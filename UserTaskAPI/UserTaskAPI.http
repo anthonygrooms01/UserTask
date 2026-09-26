@@ -1,6 +1,107 @@
-@UserTaskAPI_HostAddress = http://localhost:5281
+@UserTaskAPI_HostAddress = https://localhost:4000
+@id = 2
 
-GET {{UserTaskAPI_HostAddress}}/users/
-Accept: application/json
+GET {{UserTaskAPI_HostAddress}}/api/users
+Content-Type: application/json
 
 ###
+
+POST {{UserTaskAPI_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Anthony",
+    "birthday": "2001-11-01T00:00:00.000Z"
+}
+
+###
+
+POST {{UserTaskAPI_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Rob",
+    "birthday": "1990-09-14T00:00:00.000Z"
+}
+
+###
+
+GET {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+
+###
+
+DELETE {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+
+###
+
+
+PUT {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Tonyyy",
+    "birthday": "2001-11-01T00:00:00.000Z"
+}
+
+###
+
+PATCH {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+Content-Type: application/json
+{
+    "name": "Tone"
+}
+
+###
+
+GET {{UserTaskAPI_HostAddress}}/api/tasks
+Content-Type: application/json
+
+###
+
+POST {{UserTaskAPI_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "id": 1,
+    "userId": 1,
+    "description": "Write API."
+}
+
+###
+
+POST {{UserTaskAPI_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "id": 2,
+    "userId": 2,
+    "description": "Review API."
+}
+
+###
+
+GET {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+
+###
+
+DELETE {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+
+###
+
+PUT {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+Content-Type: application/json
+{
+    "id": 1,
+    "userId": 1,
+    "description": "Write and test API."
+}
+
+###
+
+PATCH {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+Content-Type: application/json
+{
+    "Description": "Review and deploy API."
+}
