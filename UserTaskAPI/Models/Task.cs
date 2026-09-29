@@ -10,7 +10,7 @@ namespace UserTaskAPI.Models
         public int Id { get; set; }
         [ForeignKey("UserId")]
         public int UserId { get; set; }
-        public string Description { get; set; }
-        public User User { get; set; }
+        public string? Description { get; set; }
+        public User User { get; set; } = null!;
     }
 }

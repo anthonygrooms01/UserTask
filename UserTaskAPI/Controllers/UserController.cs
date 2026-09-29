@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -14,97 +15,118 @@ namespace UserTaskAPI.Controllers
 {
     [Route("api/users")]
     [ApiController]
-    public class UserController(AppDbContext context) : ControllerBase
+    public class UserController(AppDbContext _context) : ControllerBase
     {
-        private readonly AppDbContext _context = context;
-
-        // GET: api/User
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            throw new Exception();
             return await _context.Users.ToListAsync();
         }
 
-        // GET: api/User/5
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<UserDto>> GetUser(int id)
         {
+            if (id <= 0)
+                return BadRequest("The id field must be positive.");
+
             var user = await _context.Users.FindAsync(id);
 
-            if (user == null)
+            if (user is null)
             {
-                return NotFound();
+                return NotFound("The user does not exist.");
             }
 
-            return user;
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Birthday = user.Birthday
+            };
+
+            return userDto;
         }
 
-        // PUT: api/User/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> PutUser(int id, PutUserDto user)
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(CreateUserDto createUserDto)
         {
-            var existingUser = await _context.Users.FindAsync(id);
+            if (createUserDto.Name is null)
+                return BadRequest("The name field is required.");
 
-            if (existingUser == null)
+            var user = new User()
             {
-                return NotFound();
+                Name = createUserDto.Name,
+                Birthday = createUserDto.Birthday,
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Birthday = user.Birthday,
+            };
+
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, userDto);
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> PutUser(int id, PutUserDto putUserDto)
+        {
+            if (id <= 0)
+                return BadRequest("The id field must be positive.");
+
+            var user = await _context.Users.FindAsync(id);
+
+            if (user is null)
+            {
+                return NotFound("The user does not exist.");
             }
 
-            existingUser.Birthday = user.Birthday;
-            existingUser.Name = user.Name;
+            if (putUserDto.Name is null)
+            {
+                return BadRequest("The name field is required.");
+            }
+
+            user.Birthday = putUserDto.Birthday;
+            user.Name = putUserDto.Name;
 
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        // POST: api/User
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
-        {
-            _context.Users.Add(user);
-
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetUsers), new { id = user.Id }, user);
         }
 
         [HttpPatch("{id:int}")]
-        public async Task<IActionResult> PatchUser(int id, UserDTO newUser)
+        public async Task<IActionResult> PatchUser(int id, PatchUserDto patchUserDto)
         {
-            User user = await _context.Users.FindAsync(id);
+            if (id <= 0)
+                return BadRequest("The id field must be positive.");
 
-            if (user==null)
+            var user = await _context.Users.FindAsync(id);
+
+            if (user is null)
             {
-                return NotFound();
+                return NotFound("The user does not exist.");
             }
 
-            if (newUser.Id!=null)
-                user.Id = (int)newUser.Id;
-            if (newUser.Birthday != null)
-                user.Birthday = (DateTime)newUser.Birthday;
-            if (newUser.Name != null)
-                user.Name = (string)newUser.Name;
-            _context.SaveChangesAsync();
+            if (patchUserDto.Birthday is not null)
+                user.Birthday = patchUserDto.Birthday;
+            if (patchUserDto.Name is not null)
+                user.Name = patchUserDto.Name;
+
+            await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        public class UserDTO
-        {
-            public int? Id { get; set; }
-            public string? Name { get; set; }
-            public DateTime? Birthday { get; set; }
-        }
-
-        // DELETE: api/User/5
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            if (id <= 0)
+                return BadRequest("The id field must be positive.");
+
             var user = await _context.Users.FindAsync(id);
-            if (user == null)
+            if (user is null)
             {
                 return NotFound();
             }
@@ -113,11 +135,6 @@ namespace UserTaskAPI.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool UserExists(int id)
-        {
-            return _context.Users.Any(e => e.Id == id);
         }
     }
 }

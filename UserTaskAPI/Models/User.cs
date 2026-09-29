@@ -6,8 +6,8 @@ namespace UserTaskAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        public string? Name { get; set; }
+        public required string Name { get; set; }
         public DateTime? Birthday { get; set; }
-        public List<Task> Tasks { get; set; } = new();
+        public List<Task> Tasks { get; set; } = [];
     }
 }

@@ -6,10 +6,8 @@ namespace UserTaskAPI.Controllers
 {
     [Route("api/tasks")]
     [ApiController]
-    public class TaskController(AppDbContext context) : ControllerBase
+    public class TaskController(AppDbContext _context) : ControllerBase
     {
-        private readonly AppDbContext _context = context;
-
         // GET: api/Task
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserTaskAPI.Models.Task>>> GetTasks()
