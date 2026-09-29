@@ -126,12 +126,16 @@ namespace UserTaskAPI.Controllers
                 return BadRequest("The id field must be positive.");
 
             var user = await _context.Users.FindAsync(id);
+
             if (user is null)
             {
                 return NotFound("The user does not exist.");
             }
 
-            _context.Users.Remove(user);
+            if (user.Tasks.Count > 0)
+                return Conflict("This user has tasks. Please reassign.");
+
+                _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
             return NoContent();
