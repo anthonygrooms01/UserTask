@@ -90,13 +90,6 @@ namespace UserTaskAPI.Controllers
             return NoContent();
         }
 
-        public class TaskDTO
-        {
-            public int? Id { get; set; }
-            public int? UserID { get; set; }
-            public string? Description { get; set; }
-        }
-
         // DELETE: api/User/5
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteTask(int id)
