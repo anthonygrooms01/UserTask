@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UserTaskAPI.Data;
+using UserTaskAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,6 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("ConnectionString 'DefaultConnection' not found.");
-
-Console.WriteLine(connectionString);
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(connectionString));
@@ -29,6 +28,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 

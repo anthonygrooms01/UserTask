@@ -22,6 +22,7 @@ namespace UserTaskAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
+            throw new Exception();
             return await _context.Users.ToListAsync();
         }
 
@@ -54,14 +55,7 @@ namespace UserTaskAPI.Controllers
             existingUser.Birthday = user.Birthday;
             existingUser.Name = user.Name;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                throw;
-            }
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
