@@ -128,7 +128,7 @@ namespace UserTaskAPI.Controllers
             var user = await _context.Users.FindAsync(id);
             if (user is null)
             {
-                return NotFound();
+                return NotFound("The user does not exist.");
             }
 
             _context.Users.Remove(user);
