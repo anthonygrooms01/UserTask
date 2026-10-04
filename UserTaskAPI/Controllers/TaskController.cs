@@ -26,7 +26,7 @@ namespace UserTaskAPI.Controllers
 
             if (task is null)
             {
-                return NotFound("The user does not exist.");
+                return NotFound("The task does not exist.");
             }
 
             var taskDto = new TaskDto
@@ -44,6 +44,9 @@ namespace UserTaskAPI.Controllers
         {
             if (createTaskDto.UserId <= 0)
                 return BadRequest("The userid field must be positive.");
+
+            if (!await _context.Users.AnyAsync(u => u.Id == createTaskDto.UserId))
+                    return BadRequest("UserId must refer to an existing user.");
 
             var task = new UserTaskAPI.Models.Task
             {
@@ -70,6 +73,12 @@ namespace UserTaskAPI.Controllers
             if (id <= 0)
                 return BadRequest("The id field must be positive.");
 
+            if (putTaskDto.UserId <= 0)
+                return BadRequest("The user id field must be positive.");
+
+            if (!await _context.Users.AnyAsync(u => u.Id == putTaskDto.UserId))
+                return BadRequest("UserId must refer to an existing user.");
+
             var task = await _context.Tasks.FindAsync(id);
 
             if (task is null)
@@ -95,6 +104,12 @@ namespace UserTaskAPI.Controllers
                 return NotFound("The task does not exist.");
             }
 
+            if (patchTaskDto.UserId is not null)
+            {
+                if (!await _context.Users.AnyAsync(u => u.Id == patchTaskDto.UserId))
+                    return BadRequest("UserId must refer to an existing user.");
+                task.UserId = (int)patchTaskDto.UserId;
+            }
             if (patchTaskDto.Description is not null)
                 task.Description = patchTaskDto.Description;
 

@@ -13,7 +13,10 @@ builder.Services.AddOpenApi();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("ConnectionString 'DefaultConnection' not found.");
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlServer(connectionString));
+    opt.UseSqlServer(connectionString,sqlOptions =>
+    {
+        sqlOptions.EnableRetryOnFailure();
+    }));
 
 var app = builder.Build();
 

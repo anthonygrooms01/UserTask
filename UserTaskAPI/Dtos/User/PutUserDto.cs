@@ -1,8 +1,11 @@
-﻿namespace UserTaskAPI.Dtos.User
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace UserTaskAPI.Dtos.User
 {
     public class PutUserDto
     {
-        public required string Name { get; set; }
+        [Required]
+        public string? Name { get; set; }
         public DateTime? Birthday { get; set; }
     }
 }

@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "task",
-        "Type": "UserTaskAPI.Models.Task",
+        "Name": "createTaskDto",
+        "Type": "UserTaskAPI.Dtos.Task.CreateTaskDto",
         "IsRequired": true
       }
     ],
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "UserTaskAPI.Models.Task",
+        "Type": "UserTaskAPI.Dtos.Task.TaskDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -85,8 +85,8 @@
         "IsRequired": true
       },
       {
-        "Name": "task",
-        "Type": "UserTaskAPI.Models.Task",
+        "Name": "putTaskDto",
+        "Type": "UserTaskAPI.Dtos.Task.PutTaskDto",
         "IsRequired": true
       }
     ],
@@ -106,8 +106,8 @@
         "IsRequired": true
       },
       {
-        "Name": "newTask",
-        "Type": "UserTaskAPI.Controllers.TaskController\u002BTaskDTO",
+        "Name": "patchTaskDto",
+        "Type": "UserTaskAPI.Dtos.Task.PatchTaskDto",
         "IsRequired": true
       }
     ],
@@ -158,8 +158,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "UserTaskAPI.Models.User",
+        "Name": "createUserDto",
+        "Type": "UserTaskAPI.Dtos.User.CreateUserDto",
         "IsRequired": true
       }
     ],
@@ -191,7 +191,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "UserTaskAPI.Models.User",
+        "Type": "UserTaskAPI.Dtos.User.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -215,7 +215,7 @@
         "IsRequired": true
       },
       {
-        "Name": "user",
+        "Name": "putUserDto",
         "Type": "UserTaskAPI.Dtos.User.PutUserDto",
         "IsRequired": true
       }
@@ -236,8 +236,8 @@
         "IsRequired": true
       },
       {
-        "Name": "newUser",
-        "Type": "UserTaskAPI.Controllers.UserController\u002BUserDTO",
+        "Name": "patchUserDto",
+        "Type": "UserTaskAPI.Dtos.User.PatchUserDto",
         "IsRequired": true
       }
     ],

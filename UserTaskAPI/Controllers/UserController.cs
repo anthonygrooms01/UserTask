@@ -132,10 +132,10 @@ namespace UserTaskAPI.Controllers
                 return NotFound("The user does not exist.");
             }
 
-            if (user.Tasks.Count > 0)
+            if (await _context.Tasks.AnyAsync(t => t.UserId == id))
                 return Conflict("This user has tasks. Please reassign.");
 
-                _context.Users.Remove(user);
+            _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
             return NoContent();

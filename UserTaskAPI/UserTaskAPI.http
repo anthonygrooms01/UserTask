@@ -1,5 +1,4 @@
 @UserTaskAPI_HostAddress = https://localhost:4000
-@id = 2
 
 GET {{UserTaskAPI_HostAddress}}/api/users
 Content-Type: application/json
@@ -10,8 +9,34 @@ POST {{UserTaskAPI_HostAddress}}/api/users
 Content-Type: application/json
 
 {
-    "name": "Anthony",
-    "birthday": "2001-11-01T00:00:00.000Z"
+
+}
+
+###
+
+POST {{UserTaskAPI_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "birthday": "1985-11-01T00:00:00.000Z"
+}
+
+###
+
+Put {{UserTaskAPI_HostAddress}}/api/users/6
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+POST {{UserTaskAPI_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Josh"
 }
 
 ###
@@ -27,11 +52,11 @@ Content-Type: application/json
 
 ###
 
-GET {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+GET {{UserTaskAPI_HostAddress}}/api/user/3
 
 ###
 
-DELETE {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+DELETE {{UserTaskAPI_HostAddress}}/api/users/5
 
 ###
 
@@ -47,10 +72,10 @@ Content-Type: application/json
 
 ###
 
-PATCH {{UserTaskAPI_HostAddress}}/api/users/{{id}}
+PATCH {{UserTaskAPI_HostAddress}}/api/users/3
 Content-Type: application/json
 {
-    "name": "Tone"
+    "birthday": "asd"
 }
 
 ###
@@ -64,9 +89,7 @@ POST {{UserTaskAPI_HostAddress}}/api/tasks
 Content-Type: application/json
 
 {
-    "id": 1,
-    "userId": 1,
-    "description": "Write API."
+  "userid": 1
 }
 
 ###
@@ -75,33 +98,29 @@ POST {{UserTaskAPI_HostAddress}}/api/tasks
 Content-Type: application/json
 
 {
-    "id": 2,
-    "userId": 2,
-    "description": "Review API."
+    "userId": 6
 }
 
 ###
 
-GET {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+GET {{UserTaskAPI_HostAddress}}/api/tasks
 
 ###
 
-DELETE {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+DELETE {{UserTaskAPI_HostAddress}}/api/tasks/5
 
 ###
 
-PUT {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+PUT {{UserTaskAPI_HostAddress}}/api/tasks/2
 Content-Type: application/json
 {
-    "id": 1,
-    "userId": 1,
-    "description": "Write and test API."
+  
 }
 
 ###
 
-PATCH {{UserTaskAPI_HostAddress}}/api/tasks/{{id}}
+PATCH {{UserTaskAPI_HostAddress}}/api/tasks/2
 Content-Type: application/json
 {
-    "Description": "Review and deploy API."
+  "Description":"Deploy and Test API."
 }
