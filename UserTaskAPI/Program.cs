@@ -18,6 +18,10 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
         sqlOptions.EnableRetryOnFailure();
     }));
 
+builder.Logging.AddFilter(
+    "Microsoft.EntityFrameworkCore",
+    LogLevel.Information);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
